@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Multimodal Causal Reasoning Benchmark: Challenging Vision Large Language Models to Infer Causal Links Between Siamese Images.">
+  <meta name="keywords" content="Multimodal Causal Reasoning, Vision Large Language Model">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multimodal Causal Reasoning Benchmark</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/v2a.css">
+  <link rel="icon" href="./static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Multimodal Causal Reasoning Benchmark: Challenging Vision Large Language Models to Infer Causal Links Between Siamese Images</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Zhiyuan Li,
+            <span class="author-block">
+              Heng Wang,
+            <span class="author-block">
+              Dongnan Liu,
+            </span>
+            <span class="author-block">
+              Chaoyi Zhang,
+            </span>
+            <span class="author-block">
+              Ao Ma,
+            </span>
+            <span class="author-block">
+              Jieting Long,
+            </span>
+            <span class="author-block">
+              Weidong Cai,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of Sydney,</span>
+            <span class="author-block">School of Computer Science</span><br>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="./static/v2a-mapper_paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2408.08105"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/zhiyuan-li-john/mucr"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>Github</span>
+                  </a>
+              </span>
+              <!-- Huggingface Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/Pinkygin/MuCR"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>Hugging Face</span>
+                  </a>
+              </span>
+              <!-- Dataset Link.
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- teaser image -->
+<section class="hero teaser">
+  <div class="column has-text-centered">
+    <h2 class="subtitle has-text-centered">
+      MuCR Benchmark is to Challenge Vision Large Language Models' Causality Comprehension Ability.
+    </h2>
+    <div class="hero-body">
+      <img src="./static/images/teaser.png" width="500" height="1100"
+                 class="interpolation-image"
+                 alt="A new multimodal causal reasoning benchmark"/>
+    </div>
+  </div>
+</section>
+<!--/ teaser image -->
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Content. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Content</h2>
+        <div class="content has-text-justified">
+          <div class="toc" >
+          <ul>
+            <li>
+              <a href="#abstract">Abstract</a>
+            </li>
+            <li>
+              <a href="#limitation">Previous Limitations</a>
+            </li>
+            <li>
+              <a href="#image">Cause-and-effect Images Synthesis</a>
+            </li>
+            <li>
+              <a href="#distribution">Dataset Distribution</a>
+            </li>
+            <li>
+              <a href="#metric">Benchmark Metric</a>
+            </li>
+            <li>
+              <a href="#performance">Experimental Result</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Content. -->
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" id="limitation">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Large Language Models (LLMs) have showcased exceptional ability in causal reasoning from textual information. 
+            However, will these causalities remain straightforward for Vision Large Language Models (VLLMs) when only visual hints are provided? 
+            Motivated by this, we propose a novel <b>Mu</b>ltimodal <b>C</b>ausal <b>R</b>easoning benchmark, namely <b>MuCR</b>, 
+            to challenge VLLMs to infer semantic cause-and-effect relationship when solely relying on visual cues such as action, appearance, 
+            clothing, and environment. Specifically, we introduce a prompt-driven image synthesis approach to create siamese images with embedded 
+            semantic causality and visual cues, which can effectively evaluate VLLMs' causal reasoning capabilities. Additionally, we develop 
+            tailored metrics from multiple perspectives, including image-level match, phrase-level understanding, and sentence-level explanation, 
+            to comprehensively assess VLLMs' comprehension abilities. Our extensive experiments reveal that the current state-of-the-art VLLMs are not 
+            as skilled at multimodal causal reasoning as we might have hoped.  Furthermore, we perform a comprehensive analysis to understand these models' 
+            shortcomings from different views and suggest directions for future research. We hope MuCR can serve as a valuable resource and foundational 
+            benchmark in multimodal causal reasoning research.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" id="limitation">Previous Limitations</h2>
+        <div class="content has-text-justified">
+          <p>
+            We identify three major drawbacks in previous benchmarks:
+          </p>
+          <p>
+            (1) <b>Absence of visual modality</b>: Linguistic causal reasoning benchmarks fail to assess visual comprehension ability.
+          </p>
+          <p>
+            (2) <b>Lack of multi-image understanding</b>: Current causal reasoning VQA tasks are inadequate in cross-image analysis.
+          </p>
+          <p>
+            (3) <b>Absence of cause-and-effect question</b>: Existing multi-image understanding benchmarks lack cause-and-effect questions, 
+            rendering them insufficient for an evaluation of VLLMs' causal reasoning capabilities.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="container is-max-desktop">
+      <!-- Image-to-Audio Generation -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <img src="./static/images/limitation.png" width="1200" height="1100"
+                 class="interpolation-image"
+                 alt="A new multimodal causal reasoning benchmark"/>
+        </div>
+      </div>
+
+    
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3" id="image">Cause-and-effect Images Synthesis</h2>
+          <div class="content has-text-justified">
+            <p>
+              Our cause-and-effect image synthesis begins with generating core caption pairs, each consisting of one caption describing the 
+              cause and the other stating the effect. We then leverage the language capabilities of LLMs to entail these paired captions into 
+              contextually relevant descriptions, enhancing the consistency of sentences to facilitate the creation of cause-and-effect image 
+              pairs. Finally, we employ diffusion models to generate numerous siamese images based on these descriptions, annotating cue phrases 
+              and causality explanations for each pair.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container is-max-desktop">
+        <!-- Image-to-Audio Generation -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <img src="./static/images/synthesis.png" width="1500" 
+                   class="interpolation-image"
+                   alt="A new multimodal causal reasoning benchmark"/>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3" id="distribution">Dataset Distribution</h2>
+            <div class="content has-text-justified">
+              <p>
+                Our MuCR benchmark consist 400 pairs of cause-and-effect images across various categories (humans, animals, plants, characters, 
+                and mixtures) and different styles (photograph and comic). The below table illustrates some examples featuring various categories 
+                and styles from our MuCR benchmark as well as the distribution overview of categories and styles.
+              </p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="container is-max-desktop">
+          <!-- Image-to-Audio Generation -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+              <img src="./static/images/distribution.png" width="1500" 
+                     class="interpolation-image"
+                     alt="A new multimodal causal reasoning benchmark"/>
+            </div>
+          </div>
+        
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="metric">Benchmark Metric</h2>
+              <div class="content has-text-justified">
+                <p>
+                  <b>Image-level Metric.</b> The image-level score consists of two parts: cause-to-effect (<b>C2E</b>) score and effect-to-cause (<b>E2C</b>) score. 
+                  This scoring is designed to assess whether the VLLMs can identify visual cues and semantic causality between images and make the correct choice from 
+                  four potential images (see paper for more details). 
+                </p>
+                <p>
+                  <b>Phrase-level Metric.</b> The phrase-level metric is called <b>Cue</b> score, which tests VLLMs' capability to distinguish the correct cue 
+                  from a list of fraudulent phrases according to the siamese images (see paper for more details). 
+                </p>
+                <p>
+                  <b>Sentence-level Metric.</b> Our final metric is designed to evaluate VLLMs' ability to explain causality. This sentence-level metric is 
+                  called the explanation (<b>Exp</b>) score (see paper for more details).
+                </p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3" id="performance">Experimental Result</h2>
+              <div class="content has-text-justified">
+                <p>
+                  We evaluate several popular open-source models on our benchmark, including BLIP2, OpenFlamingo, InstructBLIP, MiniGPT4, and LLaVA. Additionally, 
+                  we assess large-scale in-house models such as Claude, Gemini, and GPT-4. The models' performance is shown as below (see paper for more details).
+                </p>
+              </div>
+            </div>
+          </div>
+      
+          <div class="container is-max-desktop">
+            <!-- Image-to-Audio Generation -->
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-full-width">
+                <img src="./static/images/performance.png" width="1500" 
+                       class="interpolation-image"
+                       alt="A new multimodal causal reasoning benchmark"/>
+              </div>
+            </div>
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{li2024multimodal,
+          title={Multimodal Causal Reasoning Benchmark: Challenging Vision Large Language Models to Infer Causal Links Between Siamese Images},
+          author={Li, Zhiyuan and Wang, Heng and Liu, Dongnan and Zhang, Chaoyi and Ma, Ao and Long, Jieting and Cai, Weidong},
+          journal={arXiv preprint arXiv:2408.08105},
+          year={2024}
+        }</code></pre>
+      </div>
+    </section>
+   
+</footer>
+
+</body>
+</html>
