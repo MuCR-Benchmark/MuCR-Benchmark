@@ -1,6 +1,6 @@
 ## MuCR-Benchmark
  
-This is the repository for [MuCR-Benchmark website](https://).
+This is the repository for [MuCR-Benchmark website](https://MuCR-Benchmark.github.io).
 
 If you think our MuCR Benchmark is useful for your research, we appreciate your citation:
 ```
